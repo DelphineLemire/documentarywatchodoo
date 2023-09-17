@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "documentary-watch-odoo",
+    'name': "documentarywatchodoo",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
@@ -10,17 +10,20 @@
         Long description of module's purpose
     """,
 
-    'author': "My Company",
-    'website': "https://www.yourcompany.com",
-
+    'author': "Delphine Lemire",
+    'website': "https://www.delphinelemire.fr",
+    'installable': True,
+    'application': True,
+    
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/16.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
-    'category': 'Uncategorized',
+    'category': 'Social Network',
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 
+               ],
 
     # always loaded
     'data': [
@@ -32,4 +35,5 @@
     'demo': [
         'demo/demo.xml',
     ],
+    
 }
