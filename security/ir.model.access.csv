@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_documentarywatchodoo_documentarywatchodoo,documentarywatchodoo.documentarywatchodoo,model_documentarywatchodoo_documentarywatchodoo,base.group_user,1,1,1,1
+documentarywatchodoo.access_documentarywatchodoo_theme,access_documentarywatchodoo_theme,documentarywatchodoo.model_documentarywatchodoo_theme,base.group_user,1,1,1,0

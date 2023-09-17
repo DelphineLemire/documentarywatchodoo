@@ -14,8 +14,23 @@
       </field>
     </record>
 -->
+    <record model="ir.ui.view" id="documentarywatchodoo.themes_list">
+      <field name="name">documentarywatchodoo list theme </field>
+      <field name="model">documentarywatchodoo.theme</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="label"/>
+        </tree>
+      </field>
+    </record>
 
     <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="documentarywatchodoo.action_window_theme">
+      <field name="name">documentarywatchodoo window theme</field>
+      <field name="res_model">documentarywatchodoo.theme</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
 <!--
     <record model="ir.actions.act_window" id="documentary-watch-odoo.action_window">
       <field name="name">documentary-watch-odoo window</field>
@@ -33,7 +48,7 @@
       <field name="code">
         action = {
           "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
+          "view_mode": "tree,form",:window
           "res_model": model._name,
         }
       </field>
@@ -41,6 +56,16 @@
 -->
 
     <!-- Top menu item -->
+ <menuitem name="documentarywatchodoo" id="documentarywatchodoo.menu_root"/>
+ <menuitem name="Parameters" id="documentarywatchodoo.parameters" parent="documentarywatchodoo.menu_root" />
+ <menuitem 
+   name="Themes" 
+   id="documentarywatchodoo.themes" 
+   parent="documentarywatchodoo.parameters" 
+   action="documentarywatchodoo.action_window_theme"
+
+   />
+
 <!--
     <menuitem name="documentary-watch-odoo" id="documentary-watch-odoo.menu_root"/>
 -->
