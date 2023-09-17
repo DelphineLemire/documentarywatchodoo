@@ -13,7 +13,7 @@
 
     <!-- actions opening views on models -->
     <record model="ir.actions.act_window" id="documentarywatchodoo.action_window_theme">
-      <field name="name">documentarywatchodoo window theme</field>
+      <field name="name">Themes</field>
       <field name="res_model">documentarywatchodoo.theme</field>
       <field name="view_mode">tree,form</field>
     </record>
@@ -21,11 +21,11 @@
 
     <!-- Top menu item -->
     <menuitem name="Documentary Watch" id="documentarywatchodoo.menu_root"/>
-    <menuitem name="Parameters" id="documentarywatchodoo.parameters" parent="documentarywatchodoo.menu_root" />
+    <menuitem name="Configuration" id="documentarywatchodoo.configuration" parent="documentarywatchodoo.menu_root" />
     <menuitem 
       name="Themes" 
       id="documentarywatchodoo.themes" 
-      parent="documentarywatchodoo.parameters" 
+      parent="documentarywatchodoo.configuration" 
       action="documentarywatchodoo.action_window_theme"
 
       />

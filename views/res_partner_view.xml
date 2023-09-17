@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<odoo>
+        <!-- Add contextual button on partner form view -->
+        <record id="view_partners_form_contribution1" model="ir.ui.view">
+            <field name="name">view.res.partner.form.documentarywatchodoo.inherited1</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field eval="1" name="priority"/>
+            <field name="arch" type="xml">
+                <data>
+                    <div name="button_box" position="inside">
+                        <button class="oe_stat_button o_res_partner_tip_opp" type="object"
+                            name="action_view_contribution"
+                            icon="fa-star"
+                            context="{'default_contributor_id': active_id, 'default_type':'contribution'}">
+                            <field string="Contributions" name="contribution_count" widget="statinfo"/>
+                        </button>
+                    </div>
+                </data>
+            </field>
+        </record>
+
+</odoo>

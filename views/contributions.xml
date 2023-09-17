@@ -1,0 +1,67 @@
+<odoo>
+  <data>
+    <!-- TOPIC -->
+    <record model="ir.ui.view" id="documentarywatchodoo.topics_list">
+      <field name="name">documentarywatchodoo list topic </field>
+      <field name="model">documentarywatchodoo.topic</field>
+      <field name="arch" type="xml">
+        <tree >
+           <field name="label"/>
+           <field name="theme_id"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="documentarywatchodoo.action_window_topic">
+      <field name="name">Topics</field>
+      <field name="res_model">documentarywatchodoo.topic</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- Top menu item -->
+    <menuitem 
+      name="Topics" 
+      id="documentarywatchodoo.topics" 
+      parent="documentarywatchodoo.menu_root" 
+      action="documentarywatchodoo.action_window_topic"
+
+      />
+
+
+    <!-- CONTRIBUTION -->
+    <record model="ir.ui.view" id="documentarywatchodoo.contributions_list">
+      <field name="name">documentarywatchodoo list contributions </field>
+      <field name="model">documentarywatchodoo.contribution</field>
+      <field name="arch" type="xml">
+        <tree >
+           <field name="label"/>
+           <field name="contributor_id"/>
+           <field name="topic_id"/>
+           <field name="url" widget="url" />
+        </tree>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="documentarywatchodoo.action_window_contribution">
+      <field name="name">Contributions</field>
+      <field name="res_model">documentarywatchodoo.contribution</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- Top menu item -->
+    <menuitem 
+      name="Contributions" 
+      id="documentarywatchodoo.contributions" 
+      parent="documentarywatchodoo.menu_root" 
+      action="documentarywatchodoo.action_window_contribution"
+
+      />
+
+
+
+ </data>
+</odoo>

@@ -24,12 +24,15 @@
 
     # any module necessary for this one to work correctly
     'depends': ['base', 
+                'crm',
                ],
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
         'views/themes.xml',
+        'views/contributions.xml',
+        'views/res_partner_view.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode
