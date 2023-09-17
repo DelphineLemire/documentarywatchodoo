@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 
-# from odoo import models, fields, api
+from odoo import models, fields, api
 
 
-# class documentary-watch-odoo(models.Model):
-#     _name = 'documentary-watch-odoo.documentary-watch-odoo'
-#     _description = 'documentary-watch-odoo.documentary-watch-odoo'
+class Theme(models.Model):
+     _name = 'documentary_watch_odoo.theme'
+     _description = 'Theme for documentary watch'
 
-#     name = fields.Char()
+     label = fields.Char()
 #     value = fields.Integer()
 #     value2 = fields.Float(compute="_value_pc", store=True)
 #     description = fields.Text()
