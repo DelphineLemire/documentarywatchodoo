@@ -4,7 +4,7 @@ from odoo import models, fields, api
 
 
 class Theme(models.Model):
-     _name = 'documentary_watch_odoo.theme'
+     _name = 'documentarywatchodoo.theme'
      _description = 'Theme for documentary watch'
 
      label = fields.Char()
