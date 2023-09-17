@@ -1,2 +1,2 @@
-# documentary-watch-odoo
+# documentaryatchodoo
 Documentary-watch for odoo
