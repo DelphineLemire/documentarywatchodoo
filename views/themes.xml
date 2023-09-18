@@ -6,16 +6,31 @@
       <field name="model">documentarywatchodoo.theme</field>
       <field name="arch" type="xml">
         <tree editable="top">
-           <field name="label"/>
-        </tree>
+           <field name="name" />
+         </tree>
       </field>
     </record>
+    
 
-    <!-- actions opening views on models -->
-    <record model="ir.actions.act_window" id="documentarywatchodoo.action_window_theme">
-      <field name="name">Themes</field>
-      <field name="res_model">documentarywatchodoo.theme</field>
-      <field name="view_mode">tree,form</field>
+    <record id="documentarywatchodoo.themes_search" model="ir.ui.view">
+            <field name="name">documentarywatchodoo.theme.view.search</field>
+            <field name="model">documentarywatchodoo.theme</field>
+            <field name="arch" type="xml">
+                <search string="Search theme">
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+
+      <!-- actions opening views on models -->
+      <record model="ir.actions.act_window" id="documentarywatchodoo.action_window_theme">
+        <field name="name">Themes</field>
+        <field name="res_model">documentarywatchodoo.theme</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="documentarywatchodoo.themes_search"/>
+
+
     </record>
 
 

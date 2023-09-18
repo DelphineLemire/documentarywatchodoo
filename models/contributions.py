@@ -7,7 +7,7 @@ class Topic(models.Model):
      _name = 'documentarywatchodoo.topic'
      _description = 'Topic for documentary watch'
 
-     label = fields.Char()
+     name = fields.Char()
      description = fields.Text()
      theme_id = fields.Many2one('documentarywatchodoo.theme', 
                            string='Theme'
@@ -15,7 +15,7 @@ class Topic(models.Model):
      def _get_name(self):
         """ Utility method to allow name_get to be overrided without re-browse the partner """
         topic = self
-        name = topic.label or ''
+        name = topic.name or ''
 
         return name.strip()
 
@@ -34,7 +34,7 @@ class Contribution(models.Model):
                ]
      _description = 'Contribution for documentary watch'
 
-     label = fields.Char()
+     name = fields.Char()
      url = fields.Char()
 
      contributor_id =  fields.Many2one('res.partner', 
@@ -46,7 +46,7 @@ class Contribution(models.Model):
      def _get_name(self):
         """ Utility method to allow name_get to be overrided without re-browse the partner """
         contribution = self
-        name = contribution.label or ''
+        name = contribution.name or ''
 
         return name.strip()
 

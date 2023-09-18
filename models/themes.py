@@ -7,12 +7,12 @@ class Theme(models.Model):
      _name = 'documentarywatchodoo.theme'
      _description = 'Theme for documentary watch'
 
-     label = fields.Char()
+     name = fields.Char()
 
      def _get_name(self):
         """ Utility method to allow name_get to be overrided without re-browse the partner """
         theme = self
-        name = theme.label or ''
+        name = theme.name or ''
 
         return name.strip()
 
