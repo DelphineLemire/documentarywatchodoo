@@ -28,6 +28,10 @@ class Topic(models.Model):
 
 class Contribution(models.Model):
      _name = 'documentarywatchodoo.contribution'
+     _inherit = ['mail.thread.cc',
+                'mail.activity.mixin',
+                'utm.mixin',
+               ]
      _description = 'Contribution for documentary watch'
 
      label = fields.Char()
